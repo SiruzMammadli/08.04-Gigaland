@@ -1,0 +1,75 @@
+// -=-=- RESPONSIVE STYLE -=-=-
+
+@media (max-width: 1400px) {
+    .main {
+        .content {
+            .explore {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+
+    .main {
+        header {
+            position: static;
+            &.mobile {
+                position: relative;
+                background-color: $header-mobile-bg;
+                overflow: hidden;
+                transition: .5s ease;
+            }
+            &.active {
+                height: 300px;
+            }
+            .nav-side {
+                ul {
+                    position: absolute;
+                    top: 89px;
+                    left: 20px; right: 20px;
+                    flex-direction: column;
+                    align-items: flex-start !important;
+                    
+                    li {
+                        width: 100%;
+
+                        &:not(:last-child) {
+                            border-bottom: 1px solid rgba(255,255,255, .1);
+                        }
+                        a {
+                            padding: 15px 20px 15px 0;
+                        }
+                    }
+                }
+                .hamburger-btn {
+                    display: block;
+                    margin-left: 20px;
+                    width: 32px; height: 32px;
+                    background-color: $hamburger-bg;
+                    text-align: center;
+                    cursor: pointer;
+
+                    i {
+                        line-height: 32px;
+                        color: $white-clr;
+                        font-size: 29px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        header {
+            .logo-side {
+                input {
+                    display: none;
+                }
+            }
+        }
+    }
+}

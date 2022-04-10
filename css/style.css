@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  text-decoration: none !important;
+  outline: none !important;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.grdnt {
+  background: linear-gradient(217deg, #1081e8, #f32177 75%);
+}
+
+.txt-grdnt {
+  background: linear-gradient(45deg, #1081e8, #f32177);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://gigaland.io/images/background/20.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+
+.main header {
+  position: fixed;
+  width: 100%;
+  height: 89px;
+  padding: 26px 18px;
+  z-index: 999;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.main header.dark {
+  background-color: rgba(20, 20, 31, 0.9);
+}
+
+.main header .logo-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main header .logo-side input {
+  display: block;
+  margin-left: 30px;
+  padding: 6px 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  width: 275px;
+}
+
+.main header .logo-side input::-webkit-input-placeholder {
+  color: white;
+}
+
+.main header .logo-side input:-ms-input-placeholder {
+  color: white;
+}
+
+.main header .logo-side input::-ms-input-placeholder {
+  color: white;
+}
+
+.main header .logo-side input::placeholder {
+  color: white;
+}
+
+.main header .nav-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main header .nav-side ul li a {
+  position: relative;
+  display: block;
+  padding: 0 18px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.main header .nav-side ul li a i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  font-size: 16px;
+  color: white;
+  opacity: .5;
+}
+
+.main header .nav-side .btn-grdnt {
+  display: block;
+  margin-left: 20px;
+  padding: 6px 20px;
+  color: white;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+.main header .nav-side .hamburger-btn {
+  display: none;
+}
+
+.main .content {
+  padding-top: 50px;
+}
+
+.main .content h6 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 12px;
+  margin-bottom: 18px;
+}
+
+.main .content h1 {
+  font-size: 72px;
+  line-height: 80px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.main .content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main .content .explore {
+  display: inline-block;
+  padding: 8px 40px;
+  color: white;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 30px;
+}
+
+.main .content .counts {
+  margin-bottom: 30px;
+}
+
+.main .content .counts .count-box {
+  padding: 20px 0 10px;
+}
+
+.main .content .counts .count-box h3 {
+  margin-bottom: 5px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.main .content .counts .count-box h5 {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.main .content img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: -30px;
+}
+
+.works {
+  background-color: #1a1a25;
+  padding-top: 90px;
+  color: white;
+}
+
+.works h2 {
+  font-weight: 700;
+  position: relative;
+  margin-top: 24px;
+  padding-bottom: 20px;
+}
+
+.works h2::before {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: linear-gradient(217deg, #1081e8, #f32177 75%);
+}
+
+.works .card-box {
+  margin-top: 24px;
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  text-align: center;
+}
+
+.works .card-box i {
+  display: inline-block;
+  width: 56px;
+  height: 56px;
+  border-radius: 3px;
+  font-size: 32px;
+  text-align: center;
+  line-height: 56px;
+  margin-bottom: 20px;
+}
+
+.works .card-box h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.works .card-box p {
+  color: #a2a2a2;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.items {
+  background-color: #1a1a25;
+  padding-top: 90px;
+  color: white;
+}
+
+.items h2 {
+  font-weight: 700;
+  position: relative;
+  margin-top: 24px;
+  padding-bottom: 20px;
+}
+
+.items h2::before {
+  position: absolute;
+  content: '';
+  width: 50px;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: linear-gradient(217deg, #1081e8, #f32177 75%);
+}
+
+@media (max-width: 1400px) {
+  .main .content .explore {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main header {
+    position: static;
+  }
+  .main header.mobile {
+    position: relative;
+    background-color: #1a1a25;
+    overflow: hidden;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+  }
+  .main header.active {
+    height: 300px;
+  }
+  .main header .nav-side ul {
+    position: absolute;
+    top: 89px;
+    left: 20px;
+    right: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  .main header .nav-side ul li {
+    width: 100%;
+  }
+  .main header .nav-side ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .main header .nav-side ul li a {
+    padding: 15px 20px 15px 0;
+  }
+  .main header .nav-side .hamburger-btn {
+    display: block;
+    margin-left: 20px;
+    width: 32px;
+    height: 32px;
+    background-color: #14141f;
+    text-align: center;
+    cursor: pointer;
+  }
+  .main header .nav-side .hamburger-btn i {
+    line-height: 32px;
+    color: white;
+    font-size: 29px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main header .logo-side input {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
