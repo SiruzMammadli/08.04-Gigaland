@@ -7,6 +7,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 // -=-=- COLORS -=-=-
 $white-clr: white;
 $black-clr: black;
@@ -16,6 +20,8 @@ $grdnt-clr-2: #f32177;
 $header-dark: rgba(20, 20, 31, .9);
 $header-mobile-bg: #1a1a25;
 $hamburger-bg: #14141f;
+$slider-bg: #242435;
+$carousel-a-blue: #1081e8;
 
 .grdnt {
     background: linear-gradient(217deg, $grdnt-clr, $grdnt-clr-2 75%);
@@ -237,6 +243,7 @@ $hamburger-bg: #14141f;
         font-weight: 700;
         position: relative;
         margin-top: 24px;
+        margin-bottom: 15px;
         padding-bottom: 20px;
 
         &::before {
@@ -246,6 +253,251 @@ $hamburger-bg: #14141f;
             bottom: 0; left: 50%;
             transform: translateX(-50%);
             background: linear-gradient(217deg, $grdnt-clr, $grdnt-clr-2 75%);
+        }
+    }
+
+    // CAROUSEL SLIDER
+
+    .wrapper {
+        padding-left: 7.5%;
+        padding-right: 5%;
+        padding-bottom: 90px;
+        .owl-carousel {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            
+            .items-carousel {
+                overflow: hidden;
+                padding-top: 30px;
+                .item-outer {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 33px;
+                    width: 200%;
+                    // padding: 0 7.5%;
+                    
+                    .nft-item {
+                        width: calc(50% / 4 - 33px);
+                        background-color: $slider-bg;
+                        padding: 20px;
+                        border-radius: 15px;
+                        position: relative;
+                        transition: .5s ease;
+            
+                        &:hover {
+                            .bg-image {
+                                img {
+                                    transform: scale(1.03);
+                                }
+                            }
+                        }
+            
+                        a {
+                            display: block;
+                            img {
+                                border-radius: 8px;
+                                width: 100%;
+                                height: auto;
+                                background-size: cover;
+                                vertical-align: middle;
+                                transition: .7s;
+                            }
+                        }
+            
+                        .author-pp {
+                            position: absolute;
+                            top: 15px; left: 15px;
+                            z-index: 1;
+            
+                            &:hover {
+                                a {
+                                    img {
+                                        transform: scale(.85);
+                                    }
+                                }
+            
+                                [data-tooltip] {
+                                    &::before, &::after {
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                            
+                            a {
+                                position: relative;
+                                display: block;
+                                width: 50px; height: 50px;
+                                border-radius: 50%;
+                                cursor: pointer;
+            
+                                img {
+                                    border-radius: 50%;
+                                    transition: .3s;
+                                }
+            
+                                i {
+                                    position: absolute;
+                                    bottom: 0; right: 0;
+                                    font-size: 16px;
+                                    color: $white-clr;
+                                    width: 16px; height: 16px;
+                                    line-height: 16px;
+                                    border-radius: 50%;
+                                }
+                            }
+            
+                            [data-tooltip] {
+                                position: relative;
+            
+                                &::before {
+                                    position: absolute;
+                                    bottom: 125%; left: 50%;
+                                    transform: translateX(-50%);
+                                    width: 190px;
+                                    padding: 4px 0;
+                                    font-size: 13.5px;
+                                    font-weight: 600;
+                                    color: #0d0c22;
+                                    background-color: $white-clr;
+                                    opacity: .85;
+                                    text-align: center;
+                                    border-radius: 5px;
+                                    content: attr(data-tooltip);
+                                    cursor: default;
+                                }
+                                &::after {
+                                    content: '';
+                                    position: absolute;
+                                    bottom: calc(100% + 1px); left: 50%;
+                                    transform: translateX(-50%);
+                                    opacity: .85;
+                                    border: 6px solid transparent;
+                                    border-top-color: $white-clr;
+                                }
+                                &::before, &::after {
+                                    transition: .4s;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                }
+                            }
+                        }
+            
+                        .nft-info {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            margin-top: 12px;
+            
+                            .title {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                z-index: 1;
+            
+                                h4 {
+                                    color: $white-clr;
+                                    font-size: 15px;
+                                    font-weight: 700;
+                                    margin: 0;
+                                }
+                                span {
+                                    position: relative;
+                                    display: block;
+                                    cursor: pointer;
+                                    font-size: 18px;
+            
+                                    i {
+                                        position: absolute;
+                                        top: 50%;
+                                        right: 0;
+                                        transform: translateY(-50%);
+                                    }
+                                }
+                            }
+            
+                            .nft-price {
+                                color: $p-a2-clr;
+                                font-size: 14px;
+                                font-weight: 700;
+            
+                                span {
+                                    color: $white-clr;
+                                    margin-left: 10px;
+                                }
+                            }
+                            .nft-action {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+            
+                                a {
+                                    display: block;
+                                    color: $carousel-a-blue;
+                                    font-size: 14px;
+                                    font-weight: 700;
+                                    
+                                }
+                                .item-like {
+                                    display: flex;
+                                    align-items: center;
+            
+                                    &:hover {
+                                        i {
+                                            color: #EC7498;
+                                        }
+                                    }
+            
+                                    span {
+                                        margin-left: 5px;
+                                        font-size: 12px;
+                                        cursor: default;
+                                    }
+            
+                                    i {
+                                        color: rgba(255,255,255, .2);
+                                        transition: .4s;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .arrow-nav {
+                    width: 100%;
+                    
+                    span {
+                        position: absolute;
+                        top: 45%;
+                        display: block;
+                        width: 45px; height: 45px;
+                        background-color: $header-mobile-bg;
+                        border-radius: 50%;
+                        border: 1px solid rgba(255,255,255, .1);
+                        text-align: center;
+                        cursor: pointer;
+                        transition: .2s ease;
+
+                        i {
+                            font-size: 30px;
+                            line-height: 45px;
+                        }
+
+                        &:hover {
+                            transform: scale(1.15);
+                        }
+                    }
+
+                    .prev {
+                        left: -28px;
+                    }
+                    .next {
+                        right: 5px;
+                    }
+                }
+            }
         }
     }
 }

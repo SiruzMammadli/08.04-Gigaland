@@ -5,6 +5,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .grdnt {
   background: linear-gradient(217deg, #1081e8, #f32177 75%);
 }
@@ -247,6 +251,7 @@
   font-weight: 700;
   position: relative;
   margin-top: 24px;
+  margin-bottom: 15px;
   padding-bottom: 20px;
 }
 
@@ -260,6 +265,287 @@
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background: linear-gradient(217deg, #1081e8, #f32177 75%);
+}
+
+.items .wrapper {
+  padding-left: 7.5%;
+  padding-right: 5%;
+  padding-bottom: 90px;
+}
+
+.items .wrapper .owl-carousel {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.items .wrapper .owl-carousel .items-carousel {
+  overflow: hidden;
+  padding-top: 30px;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 33px;
+  width: 200%;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item {
+  width: calc(50% / 4 - 33px);
+  background-color: #242435;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item:hover .bg-image img {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item a {
+  display: block;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item a img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  vertical-align: middle;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp:hover a img {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp:hover [data-tooltip]::before, .items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp:hover [data-tooltip]::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp a {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp a img {
+  border-radius: 50%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp a i {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 16px;
+  color: white;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  border-radius: 50%;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp [data-tooltip] {
+  position: relative;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp [data-tooltip]::before {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 190px;
+  padding: 4px 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0d0c22;
+  background-color: white;
+  opacity: .85;
+  text-align: center;
+  border-radius: 5px;
+  content: attr(data-tooltip);
+  cursor: default;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp [data-tooltip]::after {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 1px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: .85;
+  border: 6px solid transparent;
+  border-top-color: white;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp [data-tooltip]::before, .items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .author-pp [data-tooltip]::after {
+  -webkit-transition: .4s;
+  transition: .4s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .title h4 {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .title span {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .title span i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .nft-price {
+  color: #a2a2a2;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .nft-price span {
+  color: white;
+  margin-left: 10px;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .nft-action {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .nft-action a {
+  display: block;
+  color: #1081e8;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .nft-action .item-like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .nft-action .item-like:hover i {
+  color: #EC7498;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .nft-action .item-like span {
+  margin-left: 5px;
+  font-size: 12px;
+  cursor: default;
+}
+
+.items .wrapper .owl-carousel .items-carousel .item-outer .nft-item .nft-info .nft-action .item-like i {
+  color: rgba(255, 255, 255, 0.2);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.items .wrapper .owl-carousel .items-carousel .arrow-nav {
+  width: 100%;
+}
+
+.items .wrapper .owl-carousel .items-carousel .arrow-nav span {
+  position: absolute;
+  top: 45%;
+  display: block;
+  width: 45px;
+  height: 45px;
+  background-color: #1a1a25;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.items .wrapper .owl-carousel .items-carousel .arrow-nav span i {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.items .wrapper .owl-carousel .items-carousel .arrow-nav span:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+}
+
+.items .wrapper .owl-carousel .items-carousel .arrow-nav .prev {
+  left: -28px;
+}
+
+.items .wrapper .owl-carousel .items-carousel .arrow-nav .next {
+  right: 5px;
 }
 
 @media (max-width: 1400px) {
